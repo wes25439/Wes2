@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0;
+}
+
+/* Background container with periodic table */
+.lab-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/91/Periodic_table_large.png");
+  background-size: cover;       /* makes it fill screen */
+  background-position: center;  /* centers it */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.RB_flask {
+  height: 20rem;
+  width: 25rem;
+  position: relative;
+  animation: shake 1.3s ease-in-out infinite;
+  z-index: 2; /* ensures flask stays above background */
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-20px); }
+  40% { transform: translateX(20px); }
+  60% { transform: translateX(-20px); }
+  80% { transform: translateX(20px); }
+  100% { transform: translateX(0); }
+}
+
+.RB_flask::after {
+  position: absolute;
+  content: '';
+  top: 51.4%;
+  left: 93.7%;
+  transform: translate(-63.5%) rotate(16deg);
+  width: 4.5rem;
+  height: 5.5rem;
+  background-color: rgb(255, 255, 255);
+  border: 0.2rem solid black;
+  border-top: none;
+  border-bottom: none;
+}
+
+.chemical {
+  margin-top: 50%;
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%,-50%) rotate(25deg);
+  width: 14rem;
+  height: 14rem;
+  border: 0.2rem solid black;
+  border-top: 0.2rem solid rgb(255, 255, 255);
+  border-radius: 50%;
+  outline: 0.2rem solid black;
+  outline-offset: .5rem;
+  overflow: hidden;
+}
+
+.chemical::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 15%;
+  transform: rotate(79deg);
+  animation: wave 1.3s linear infinite;
+  width: 100%;
+  height: 130%;
+  background: linear-gradient(90deg, #1E90FF, #FF3131);
+}
+
+@keyframes wave {
+  0% { transform: rotate(75deg); }
+  50% { transform: rotate(90deg); }
+  100% { transform: rotate(75deg); }
+}
+
+.bubbles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bubble {
+  width: 1rem;
+  height: 1rem;
+  background: linear-gradient(90deg, #1E90FF, #FF3131);
+  border-radius: 50%;
+  transform: translate(60px,65px);
+  animation: chemical_bubbles 2s linear infinite;
+}
+
+@keyframes chemical_bubbles {
+  0%   { transform: translate(60px,65px) scale(.3); opacity: 0; }
+  20%  { opacity: 1; }
+  60%  { transform: translate(20px,45px); opacity: 1; }
+  100% { transform: translate(-40px,-80px) scale(.4); opacity: 0; }
+}
+
+.bubble:nth-child(1) { animation-delay: 1.4s; }
+.bubble:nth-child(2) { width: 2rem; height: 2rem; animation-delay: 3.4s; }
+.bubble:nth-child(3) { width: 2.5rem; height: 2.5rem; animation-delay: .7s; }
+.bubble:nth-child(4) { width: 1.4rem; height: 1.4rem; animation-delay: 5s; }
+.bubble:nth-child(5) { animation-delay: 2.2s; }
