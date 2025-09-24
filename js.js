@@ -42,21 +42,3 @@ menuIcon.addEventListener("click", () => {
 });
 
 
-
-  let lastScroll = 0;
-  const header = document.querySelector('.header');
-
-  window.addEventListener('scroll', () => {
-    let currentScroll = window.pageYOffset;
-
-    if (currentScroll > lastScroll) {
-      // scrolling down → hide menu
-      header.classList.add('hide');
-    } else {
-      // scrolling up → show menu
-      header.classList.remove('hide');
-    }
-
-    lastScroll = currentScroll;
-  });
-

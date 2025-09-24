@@ -1101,6 +1101,3 @@ section:nth-child(even) {
 }
 
 
-.header.hide {
-  transform: translateY(-100%);
-}
