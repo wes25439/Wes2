@@ -934,6 +934,49 @@ section:nth-child(even) {
   }
 }
 
+
+/* Small Mobile Screens (max-width: 480px)  oppo */
+@media (max-width: 400px) {
+  html {
+    font-size: 52%; /* slightly smaller font scaling */
+  }
+
+  .header {
+    padding: 1rem 4%;
+  }
+
+  .logo2 img {
+    height: 50px;
+  }
+
+  .navbar {
+    width: 85%;
+    right: 7%;
+  }
+
+  .home h1 {
+    font-size: 2.8rem;
+  }
+
+  .home p {
+    font-size: 1.3rem;
+  }
+
+  .glassware-card img {
+    height: 140px;
+  }
+
+  .category-card {
+    width: 100%; /* stack full width */
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr; /* stack footer */
+    text-align: center;
+  }
+}
+
+
 /* Small Mobile Screens (max-width: 480px) */
 @media (max-width: 480px) {
   html {
