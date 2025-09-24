@@ -881,7 +881,7 @@ section:nth-child(even) {
 /* Mobile Screens (max-width: 768px) */
 @media (max-width: 768px) {
   html {
-    font-size: 55%; /* smaller root font */
+    font-size: 65%; /* smaller root font */
   }
 
   .header {
@@ -925,7 +925,7 @@ section:nth-child(even) {
 
   .glassware-card img,
   .lf-card img {
-    height: 160px; /* smaller cards */
+    height: 180px; /* smaller cards */
   }
 
   .shop-category h2,
@@ -1065,4 +1065,35 @@ section:nth-child(even) {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+/* Container for spacing */
+.see-more-button {
+  text-align: right;
+  margin: 2rem 0;
+}
+
+/* Gradient button */
+.gradient-btn-see-more {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  background: var(--gradient-blue-red);
+  box-shadow: 0 4px 15px rgba(30,144,255,0.5), 0 4px 25px rgba(255,49,49,0.4);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.gradient-btn-see-more:hover {
+  background: var(--gradient-blue-black);
+  box-shadow: 0 6px 20px rgba(30,144,255,0.7), 0 6px 30px rgba(255,49,49,0.6);
+  transform: translateY(-3px);
+}
+.gradient-btn-see-more:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(30,144,255,0.5), 0 4px 25px rgba(255,49,49,0.4);
 }
