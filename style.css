@@ -1095,6 +1095,7 @@ section:nth-child(even) {
   box-shadow: 0 4px 15px rgba(30,144,255,0.5), 0 4px 25px rgba(255,49,49,0.4);
   transform: translateY(-3px);
 }
+
 .gradient-btn-see-more:active {
   transform: translateY(0);
   box-shadow: 
