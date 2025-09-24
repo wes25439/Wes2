@@ -1,10 +1,8 @@
 const words = [
-"Quick Delivery ",
-"Certified  Products",
-"Transparent Pricing",
-"Professional Installation",
-
-
+  "Quick Delivery ",
+  "Certified Products",
+  "Transparent Pricing",
+  "Professional Installation",
 ];
 
 let wordIndex = 0;
@@ -34,11 +32,18 @@ function eraseText() {
 
 typeText();
 
-const menuIcon = document.querySelector("#menu-icon");
+// ✅ Menu toggle + auto-close on scroll
+const menuIcon = document.querySelector("#menu-icon"); 
 const navbar = document.querySelector(".navbar");
 
+// Toggle menu
 menuIcon.addEventListener("click", () => {
   navbar.classList.toggle("active");
 });
 
-
+// Close menu on scroll
+window.addEventListener("scroll", () => {
+  if (navbar.classList.contains("active")) {
+    navbar.classList.remove("active");
+  }
+});
