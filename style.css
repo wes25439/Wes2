@@ -972,7 +972,7 @@ section:nth-child(even) {
   }
 
   .category-card {
-    width: 100%; /* cards full width on small screens */
+    grid-template-columns:repeat(2, 1fr) ;
   }
 
   .glassware-grid {
