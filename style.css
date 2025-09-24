@@ -1079,6 +1079,64 @@ section:nth-child(even) {
     margin: 6px auto 0;
   }
 }
+
+/* ===== Tablets (max-width: 768px) ===== */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 1.5rem;
+  }
+
+  .product-card img {
+    height: 150px;
+  }
+
+  .product-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .product-card .price {
+    font-size: 1.4rem;
+  }
+
+  .product-card .desc {
+    font-size: 1.2rem;
+  }
+
+  .product-card .gradient-btn {
+    font-size: 1.3rem;
+    padding: 0.6rem 1.4rem;
+  }
+}
+
+/* ===== Small Mobiles (max-width: 480px) ===== */
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* stack cards in one column */
+  }
+
+  .product-card img {
+    height: 130px;
+  }
+
+  .product-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .product-card .price {
+    font-size: 1.2rem;
+  }
+
+  .product-card .desc {
+    font-size: 1.1rem;
+  }
+
+  .product-card .gradient-btn {
+    width: 100%; /* full-width button */
+    padding: 0.8rem;
+  }
+}
+
 .navbar.active {
   display: flex; /* shows the dropdown when active */
 }
