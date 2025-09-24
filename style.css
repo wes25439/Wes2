@@ -936,10 +936,10 @@ section:nth-child(even) {
 
 
 
-/* Small Mobile Screens (max-width: 480px) */
+/* Small Mobile Screens (max-width: 480px) all android */
 @media (max-width: 480px) {
   html {
-    font-size: 100%;
+    font-size: 60%; /* slightly smaller root font */
   }
 
   .header {
@@ -976,15 +976,15 @@ section:nth-child(even) {
   }
 
   .glassware-grid {
-    grid-template-columns: 1fr; /* single column */
+    grid-template-columns: repeat(2, 1fr); /* single column */
   }
 
   .lab-furniture-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer-container {
-    grid-template-columns: 1fr; /* stack footer cols */
+    grid-template-columns: repeat(2, 1fr); /* stack footer cols */
     text-align: center;
   }
 
