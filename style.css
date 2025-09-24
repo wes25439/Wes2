@@ -1084,20 +1084,23 @@ section:nth-child(even) {
   color: #fff;
   text-decoration: none;
   border-radius: 10px;
-  background: var(--gradient-blue-red);
+  background: var(--gradient-blue-black);
   box-shadow: 0 4px 15px rgba(30,144,255,0.5), 0 4px 25px rgba(255,49,49,0.4);
   transition: all 0.3s ease;
 }
 
 /* Hover effect */
 .gradient-btn-see-more:hover {
-  background: var(--gradient-blue-black);
-  box-shadow: 0 6px 20px rgba(30,144,255,0.7), 0 6px 30px rgba(255,49,49,0.6);
+  background: var(--gradient-blue-red);
+  box-shadow: 0 4px 15px rgba(30,144,255,0.5), 0 4px 25px rgba(255,49,49,0.4);
   transform: translateY(-3px);
 }
 .gradient-btn-see-more:active {
   transform: translateY(0);
-  box-shadow: 0 4px 15px rgba(30,144,255,0.5), 0 4px 25px rgba(255,49,49,0.4);
+  box-shadow: 
+  0 6px 20px rgba(30,144,255,0.7), 0 6px 30px rgba(255,49,49,0.6);
+  
+  
 }
 
 
