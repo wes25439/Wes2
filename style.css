@@ -844,6 +844,93 @@ section:nth-child(even) {
     display: flex;
   }
 }
+
+/* ===== Product Sections ===== */
+.product-section {
+  padding: 4rem 6%;
+  background: var(--second-bg-color);
+}
+
+.product-section:nth-child(even) {
+  background: var(--bg-color);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+}
+
+/* ===== Product Grid ===== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+}
+
+/* ===== Product Cards ===== */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  font-size: 1.8rem;
+  margin: 0.8rem 0;
+  color: var(--dark-color);
+}
+
+.product-card .price {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--main-blue);
+  margin-bottom: 0.5rem;
+}
+
+.product-card .desc {
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 1rem;
+  min-height: 40px;
+}
+
+/* ===== Buttons ===== */
+.product-card .gradient-btn {
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--gradient-blue-black);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.product-card .gradient-btn:hover {
+  background: var(--gradient-blue-red);
+  transform: scale(1.05);
+}
+
 /* ========== RESPONSIVENESS ========== */
 
 /* Tablet Screens (max-width: 1024px) */
