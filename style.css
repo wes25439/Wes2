@@ -980,11 +980,11 @@ section:nth-child(even) {
   }
 
   .lab-furniture-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .footer-container {
-    grid-template-columns: repeat(2, 1fr); /* stack footer cols */
+    grid-template-columns: 1fr; /* stack footer cols */
     text-align: center;
   }
 
