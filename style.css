@@ -814,7 +814,7 @@ section:nth-child(even) {
 
 
   #menu-icon {
-    font-size: 2.3rem;
+    font-size: 1.8rem;
     cursor: pointer;
     transition: transform 0.2s ease;
     animation: pulse 1.5s infinite;
