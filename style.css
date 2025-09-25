@@ -1214,39 +1214,56 @@ section:nth-child(even) {
   }
 }
 
-/* Container for spacing */
-.see-more-button {
-  text-align: right;
-  margin: 2rem 0;
+/* Action row inside each card */
+.card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
-/* Gradient button */
-.gradient-btn-see-more {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 10px;
-  background: var(--gradient-blue-black);
-  box-shadow: 0 4px 15px rgba(30,144,255,0.5), 0 4px 25px rgba(255,49,49,0.4);
+/* Buy button stays styled */
+.card-actions .gradient-btn {
+  flex: unset;          /* remove stretch */
+  font-size: 1.5rem;    /* smaller text */
+  padding: 0.4rem 0.8rem;  /* smaller padding */
+  border-radius: 6px;   /* slightly rounded */
+}
+
+
+/* Share & Like buttons */
+.icon-btn {
+  background: #f4f4f4;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s ease;
 }
 
-/* Hover effect */
-.gradient-btn-see-more:hover {
-  background: var(--gradient-blue-red);
-  box-shadow: 0 4px 15px rgba(30,144,255,0.5), 0 4px 25px rgba(255,49,49,0.4);
-  transform: translateY(-3px);
+.icon-btn i {
+  color: #333;
+  transition: color 0.3s ease;
 }
 
-.gradient-btn-see-more:active {
-  transform: translateY(0);
-  box-shadow: 
-  0 6px 20px rgba(30,144,255,0.7), 0 6px 30px rgba(255,49,49,0.6);
-  
-  
+/* Hover effects */
+.icon-btn:hover {
+  background: #0077ff;
 }
+
+.icon-btn:hover i {
+  color: #fff;
+}
+
+/* Like button active state (toggle red) */
+.like-btn.active i {
+  color: red;
+}
+
 
 
