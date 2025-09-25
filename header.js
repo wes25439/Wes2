@@ -6,7 +6,7 @@ class GelkeyHeader extends HTMLElement {
         <div class="logo2">
           <img src="admin-ajax.jpg" alt="Gelkey Logo" />
         </div>
-        <a href="#home" class="logo"> 
+        <a href="index.html" class="logo"> 
           <span class="big-g">G</span>el<span>Keylab</span>
         </a>
         <i class="bx bx-menu" id="menu-icon"></i>
