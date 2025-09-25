@@ -2,40 +2,87 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="style.css">
-   <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Documentrrry</title>
   <style>
-    /* ✅ Hamburger Navbar Mobile Styles */
-    @media (max-width: 768px) {
-      .navbar {
-        display: none;
-        position: absolute;
-        top: 70px;
-        right: 5%;
-        background: rgba(0, 0, 0, 0.9);
-        padding: 1.2rem 2rem;
-        border-radius: 12px;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 75%;
-        border: 2px solid #fff;
-      }
+    /* ✅ Product Section Layout */
+    .product-section {
+      padding: 4rem 8%;
+      background: #f9f9f9;
+    }
 
-      .navbar.active {
-        display: flex;
-        gap: 1rem;
-      }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
 
-      .navbar a {
-        color: #fff;
-        font-size: 1.6rem;
-        text-decoration: none;
-      }
+    .product-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .product-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-card .price {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: var(--main-blue, #1e90ff);
+      margin-bottom: 0.5rem;
+    }
+
+    .product-card .desc {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .card-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .gradient-btn {
+      padding: 0.6rem 1.2rem;
+      font-size: 1.2rem;
+    }
+
+    .icon-btn {
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .icon-btn:hover {
+      color: var(--main-red, #ff3131);
     }
   </style>
 </head>
@@ -58,107 +105,98 @@
       <a href="chemicals.html">Chemicals</a>
       <a href="glassware.html">Glassware</a>
       <a href="apparatus.html">Lab Apparatus</a>
-      
     </nav>
 
-        </header><a href="https://wa.me/254733230030" target="_blank" class="gradient-btn">
-  Contact Us
+    <a href="https://wa.me/254733230030" target="_blank" class="gradient-btn">
+      Contact Us
     </a>
+  </header>
 
+  <!-- ✅ Product Section -->
+  <section class="product-section">
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/DOUBLE-DECKER-BED.jpg" alt="Double Decker Bed">
+        <h3>Double Decker Bed</h3>
+        <p class="price">Ksh 12,000</p>
+        <p class="desc">Strong detachable double decker bed</p>
+        <div class="card-actions">
+          <button class="gradient-btn buy-btn">Buy</button>
+          <button class="icon-btn share-btn"><i class="bx bx-share-alt"></i></button>
+          <button class="icon-btn like-btn"><i class="bx bx-heart"></i></button>
+        </div>
+      </div>
 
-   
-    <div class="product-card">
-      <img src="images/DOUBLE-DECKER-BED.jpg" alt="Gas Cartridge">
-      <h3>Double Decker bed</h3>
-      <p class="price">Ksh 12,000</p>
-      <p class="desc">Strong detachable double decker bed</p>
-      <div class="card-actions">
-        <button class="gradient-btn buy-btn" data-product="Gas Cartridge" data-price="600">Buy</button>
-        <button class="icon-btn share-btn"><i class="bx bx-share-alt"></i></button>
-        <button class="icon-btn like-btn"><i class="bx bx-heart"></i></button>
+      <div class="product-card">
+        <img src="images/SCHOOL-LOCKER-AND-CHAIR.png" alt="Wooden Desk and Chair">
+        <h3>Wooden Desk and Chair</h3>
+        <p class="price">Ksh 4,550</p>
+        <p class="desc">Comfortable wooden school chair</p>
+        <div class="card-actions">
+          <button class="gradient-btn buy-btn">Buy</button>
+          <button class="icon-btn share-btn"><i class="bx bx-share-alt"></i></button>
+          <button class="icon-btn like-btn"><i class="bx bx-heart"></i></button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/Lab refurnishing.jpg" alt="Lab Detailing">
+        <h3>Lab Detailing</h3>
+        <p class="price">Ksh 2,500</p>
+        <p class="desc">Detailed lab repair in regards to size and damage</p>
+        <div class="card-actions">
+          <button class="gradient-btn buy-btn">Buy</button>
+          <button class="icon-btn share-btn"><i class="bx bx-share-alt"></i></button>
+          <button class="icon-btn like-btn"><i class="bx bx-heart"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer Section ===== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h2 class="footer-logo"><span class="big-g">G</span>el<span>Keylab</span></h2>
+        <p>Trusted lab equipment supplier across East Africa. Purity, precision & professionalism guaranteed.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#glassware">Glassware</a></li>
+          <li><a href="#services">Lab Apparatus</a></li>
+          <li><a href="#projects">Lab Installation</a></li>
+          <li><a href="#contact">School Furniture</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>Email: info@gelkeylab.com</p>
+        <p>Office: +254 733 230 030</p>
+        <p>Sales: +254 718 175 669</p>
+        <p>Nairobi, Kenya</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <div class="footer-socials">
+          <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+          <a href="#"><i class='bx bxl-whatsapp-square'></i></a>
+          <a href="#"><i class='bx bx-mobile'></i></a>
+        </div>
       </div>
     </div>
 
-    <div class="product-card">
-      <img src="images/SCHOOL-LOCKER-AND-CHAIR.png" alt="Stopwatch">
-      <h3>Stopwatch</h3>
-      <p class="price">Ksh 4,550</p>
-      <p class="desc">Comfortable Wooden school chair.</p>
-      <div class="card-actions">
-        <button class="gradient-btn buy-btn" data-product="Stopwatch" data-price="550">Buy</button>
-        <button class="icon-btn share-btn"><i class="bx bx-share-alt"></i></button>
-        <button class="icon-btn like-btn"><i class="bx bx-heart"></i></button>
-      </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Gelkey Lab. All Rights Reserved.</p>
+      <p>Designed by Wes</p>
     </div>
-
-    <div class="product-card">
-      <img src="images/Lab refurnishing.jpg" alt="Bunsen Burner">
-      <h3>Bunsen Burner</h3>
-      <p class="price">Ksh 2,500</p>
-      <p class="desc">Detailed lab repair in regards to the size and lab damage.</p>
-      <div class="card-actions">
-        <button class="gradient-btn buy-btn" data-product="Bunsen Burner" data-price="1200">Buy</button>
-        <button class="icon-btn share-btn"><i class="bx bx-share-alt"></i></button>
-        <button class="icon-btn like-btn"><i class="bx bx-heart"></i></button>
-      </div>
-    </div>
-
-    <!-- ===== Footer Section ===== -->
-<footer class="footer">
-  <div class="footer-container">
-
-    <!-- Logo + About -->
-    <div class="footer-col">
-      <h2 class="footer-logo">
-        <span class="big-g">G</span>el<span>Keylab</span>
-      </h2>
-      <p>
-        Trusted lab equipment supplier across East Africa. Purity, precision & professionalism guaranteed.
-      </p>
-    </div>
-
-    <!-- Quick Links -->
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#glassware">Glassware</a></li>
-        <li><a href="#services">Lab Apparatus</a></li>
-        <li><a href="#projects">Lab Installation</a></li>
-        <li><a href="#contact">School Furniture</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Info -->
-    <div class="footer-col">
-      <h3>Contact</h3>
-      <p>Email: info@gelkeylab.com</p>
-      <p>Office: +254 733 230 030</p>
-      <p>Sales: +254 718 175 669</p>
-      <p>Nairobi, Kenya</p>
-    </div>
-
-    <!-- Socials -->
-    <div class="footer-col">
-      <h3>Follow Us</h3>
-      <div class="footer-socials">
-        <a href="#"><i class='bx bxl-instagram-alt'></i></a>
-        <a href="#"><i class='bx bxl-whatsapp-square'></i></a>
-        <a href="#"><i class='bx bx-mobile'></i></a>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Bottom -->
-  <div class="footer-bottom">
-    <p>&copy; 2025 Gelkey Lab. All Rights Reserved.</p>
-    <p>Designed by Wes</p>
-  </div>
-</footer>
+  </footer>
 
   <script>
-    // ✅ Hamburger Toggle Script
     const menuIcon = document.querySelector("#menu-icon");
     const navbar = document.querySelector(".navbar");
 
@@ -166,14 +204,12 @@
       navbar.classList.toggle("active");
     });
 
-    // Optional: close menu on scroll
     window.addEventListener("scroll", () => {
       if (navbar.classList.contains("active")) {
         navbar.classList.remove("active");
       }
     });
   </script>
-    <script src="whatsaap.js"></script>
-
+  <script src="whatsaap.js"></script>
 </body>
 </html>
