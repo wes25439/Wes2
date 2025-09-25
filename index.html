@@ -60,9 +60,9 @@
       <a href=""><i class='bx bxl-whatsapp-square'></i></a>
       <a href=""><i class='bx bx-mobile'></i></a>
     </div>
- <button class="gradient-btn2">
-        Get Quote
-        </button>
+    <button class="gradient-btn2" onclick="sendQuote()">
+     Get Quote
+     </button>
    
   </div>
      
@@ -199,7 +199,7 @@
     </div>
     
     <div class="see-more-button">
-  <a href="glassware.html" class="gradient-btn-see-more">
+  <a href="glassware.html" class="gradient-btn buy-btn">
     All glassware
   </a>
 </div>
@@ -252,7 +252,7 @@
       </a>
     </div>
      <div class="see-more-button">
-  <a href="apparatus.html" class="gradient-btn-see-more">
+  <a href="apparatus.html" class="gradient-btn buy-btn">
     All Apparatus
   </a>
   </div>
@@ -303,7 +303,7 @@
       </a>
     </div>
      <div class="see-more-button">
-  <a href="chemicals.html" class="gradient-btn-see-more">
+  <a href="chemicals.html" class="gradient-btn buy-btn">
     All chemicals
   </a>
     <div id="installation"></div>
@@ -365,10 +365,10 @@
         
 
         <li><a href="#home">Home</a></li>
-        <li><a href="#glassware">Glassware</a></li>
-        <li><a href="#services">Lab Apparatus</a></li>
-        <li><a href="#projects">Lab Installation</a></li>
-        <li><a href="#contact">School Furniture</a></li>
+        <li><a href="glassware.html">Glassware</a></li>
+        <li><a href="apparatus.html">Lab Apparatus</a></li>
+        <li><a href="furniture.html">Lab Installation</a></li>
+        <li><a href="furniture.html">School Furniture</a></li>
       </ul>
     </div>
 
@@ -377,7 +377,7 @@
       <h3>Contact</h3>
       <p>Email: info@gelkeylab.com</p>
       <p>Office: +254 733 230 030</p>
-      <p>Sales: +254 718 175 669</p>
+      <p style="color: white;">Sales: +254 718 175 669</p>
       <p>Nairobi, Kenya</p>
     </div>
 
@@ -399,6 +399,21 @@
     <p>Designed by Wes</p>
   </div>
 </footer>
+  <script>
+  function sendQuote() {
+    // ✅ Your WhatsApp number (no +, no spaces)
+    const phoneNumber = "254733230030";  
+
+    // ✅ Pre-filled message
+    const message = "Hello, I’d like to get a quote for your lab products.";
+
+    // ✅ WhatsApp link
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    // ✅ Open WhatsApp
+    window.open(url, "_blank");
+  }
+</script>
 
 
 
