@@ -1,7 +1,7 @@
 
     
   // Seller WhatsApp number (international format, no +, no spaces)
-  const sellerNumber = "254718175699";
+  const sellerNumber = "254733230030";
 
   // Select all buy buttons
   const buyButtons = document.querySelectorAll(".buy-btn");
